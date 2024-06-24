@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.productapipractice.ui.screen.ProductList
 import com.example.productapipractice.ui.theme.ProductAPIPracticeTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +23,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ProductAPIPracticeTheme {
+                ProductList(viewModel())
 
             }
         }
